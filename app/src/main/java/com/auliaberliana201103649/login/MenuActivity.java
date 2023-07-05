@@ -25,7 +25,8 @@ public class MenuActivity extends AppCompatActivity
     {
         _tampilMahasiswaButton = (Button) findViewById(R.id.tampilMahasiswaButton);
 
-        _tampilMahasiswaButton.setOnClickListener(new View.OnClickListener() {
+        _tampilMahasiswaButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 _tampilMahasiswaIntent = new Intent(getApplicationContext(), TampilMahasiswaActivity.class);
