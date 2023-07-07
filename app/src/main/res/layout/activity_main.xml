@@ -9,6 +9,8 @@
     android:padding="20dp"
     android:background="@drawable/gradient_a">
 
+
+
     <ImageView
         android:layout_width="150dp"
         android:src="@drawable/logostmik"
@@ -39,6 +41,13 @@
         android:id="@+id/passwordEditText">
 
     </EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/menu_username"
+        android:accessibilityPaneTitle=""
+        app:showAsAction="always"/>
+
     <Button
         android:layout_width="match_parent"
         android:text="Login"
@@ -46,4 +55,6 @@
         android:layout_height="wrap_content">
 
     </Button>
+
+
 </LinearLayout>

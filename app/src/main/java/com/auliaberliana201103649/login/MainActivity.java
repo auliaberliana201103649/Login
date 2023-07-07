@@ -1,13 +1,17 @@
 package com.auliaberliana201103649.login;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -25,6 +29,8 @@ public class MainActivity extends AppCompatActivity
     private String _password;
     private String _url;
 
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -34,6 +40,9 @@ public class MainActivity extends AppCompatActivity
         _idEditText = (EditText) findViewById(R.id.EditText);
         _loginButton = (Button) findViewById(R.id.loginButton);
         _passwordEditText = (EditText) findViewById(R.id.passwordEditText);
+
+
+
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +56,7 @@ public class MainActivity extends AppCompatActivity
                 asyncHttpClient.get(_url, new AsyncHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+
                         String hasil = new String(responseBody);
 
                         //Toast.makeText(getApplicationContext(), new String(responseBody), Toast.LENGTH_SHORT).show();
