@@ -70,7 +70,7 @@ public class ECommerceFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_e_commerce, container, false);
 
         _webView = (WebView) view.findViewById(R.id.eCommerceWebView);
-        _webView.loadUrl("https://shopee.co.id");
+        _webView.loadUrl("https://tokopedia.co.id");
 
         WebSettings settings = _webView.getSettings();
         settings.setJavaScriptEnabled(true);
