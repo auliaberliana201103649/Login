@@ -9,8 +9,8 @@ import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity
 {
-    private Button _tampilMahasiswaButton, _tampilForexButton, _tampilCuacaButton;
-    private Intent _tampilMahasiswaIntent, _tampilForexIntent, _tampilCuacaIntent;
+    private Button _tampilMahasiswaButton, _tampilForexButton, _tampilCuacaButton, _tampilImplicitButton, _tampilTabLayoutButton;
+    private Intent _tampilMahasiswaIntent, _tampilForexIntent, _tampilCuacaIntent, _tampilImplicitIntent, _tampilTabLayoutIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -21,6 +21,10 @@ public class MenuActivity extends AppCompatActivity
         initTampilMahasiswaButton();
         initTampilForexButton();
         initTampilCuacaButton();
+        initTampilImplicitButton();
+        initTampilTabLayoutButton();
+
+
     }
 
     private void  initTampilMahasiswaButton()
@@ -60,6 +64,33 @@ public class MenuActivity extends AppCompatActivity
             public void onClick(View v) {
                 _tampilCuacaIntent = new Intent(getApplicationContext(), CuacaMainActivity.class);
                 startActivity(_tampilCuacaIntent);
+            }
+        });
+    }
+
+    private void initTampilImplicitButton()
+    {
+        _tampilImplicitButton = findViewById(R.id.tampilImplicitButton);
+
+        _tampilImplicitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _tampilImplicitIntent = new Intent(getApplicationContext(), ImplicitIntentMainActivity.class);
+                startActivity(_tampilImplicitIntent);
+            }
+        });
+    }
+
+
+    private void initTampilTabLayoutButton()
+    {
+        _tampilTabLayoutButton = findViewById(R.id.tampilTabLayoutButton);
+
+        _tampilTabLayoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _tampilTabLayoutIntent = new Intent(getApplicationContext(), TabLayoutMainActivity.class);
+                startActivity(_tampilTabLayoutIntent);
             }
         });
     }
