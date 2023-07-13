@@ -24,6 +24,11 @@ public class MenuActivity extends AppCompatActivity
         initTampilImplicitButton();
         initTampilTabLayoutButton();
 
+        Bundle bundle = getIntent().getExtras();
+        String activityTitle = bundle.getString("username");
+
+        this.setTitle("Menu " + activityTitle);
+
 
     }
 
