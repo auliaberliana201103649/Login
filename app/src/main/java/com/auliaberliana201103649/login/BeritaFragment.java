@@ -63,12 +63,13 @@ public class BeritaFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
 
         View view = inflater.inflate(R.layout.fragment_berita, container, false);
 
         _webView = (WebView) view.findViewById(R.id.beritaWebView);
-        _webView.loadUrl("https://www.tribunnews.com");
+        _webView.loadUrl("https://www.detik.com");
 
         WebSettings settings = _webView.getSettings();
         settings.setJavaScriptEnabled(true);
@@ -77,10 +78,10 @@ public class BeritaFragment extends Fragment {
         WebViewClient webViewClient = new WebViewClient();
         _webView.setWebViewClient(webViewClient);
 
-        WebChromeClient webChromeClient = new WebChromeClient();
-        _webView.setWebChromeClient(webChromeClient);
-
+        WebChromeClient webChormeClient = new WebChromeClient();
+        _webView.setWebChromeClient(webChormeClient);
         // Inflate the layout for this fragment
         return view;
+
     }
 }

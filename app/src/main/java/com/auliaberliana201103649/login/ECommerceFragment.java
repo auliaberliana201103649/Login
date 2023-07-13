@@ -1,6 +1,5 @@
 package com.auliaberliana201103649.login;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -62,7 +61,6 @@ public class ECommerceFragment extends Fragment {
         }
     }
 
-    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
@@ -70,7 +68,7 @@ public class ECommerceFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_e_commerce, container, false);
 
         _webView = (WebView) view.findViewById(R.id.eCommerceWebView);
-        _webView.loadUrl("https://tokopedia.co.id");
+        _webView.loadUrl("https://www.shopee.co.id");
 
         WebSettings settings = _webView.getSettings();
         settings.setJavaScriptEnabled(true);
@@ -79,11 +77,9 @@ public class ECommerceFragment extends Fragment {
         WebViewClient webViewClient = new WebViewClient();
         _webView.setWebViewClient(webViewClient);
 
-        WebChromeClient webChromeClient = new WebChromeClient();
-        _webView.setWebChromeClient(webChromeClient);
-
+        WebChromeClient webChormeClient = new WebChromeClient();
+        _webView.setWebChromeClient(webChormeClient);
         // Inflate the layout for this fragment
         return view;
-
     }
 }

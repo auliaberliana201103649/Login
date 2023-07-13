@@ -7,13 +7,13 @@ import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 
-
 public class TabLayoutMainActivity extends AppCompatActivity
 {
     private MyFragmentPagerAdapter _myFragmentPagerAdapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab_layout_main);
 

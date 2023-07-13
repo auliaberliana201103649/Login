@@ -1,6 +1,5 @@
 package com.auliaberliana201103649.login;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -62,10 +61,10 @@ public class KampusFragment extends Fragment {
         }
     }
 
-    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
 
         View view = inflater.inflate(R.layout.fragment_kampus, container, false);
 
@@ -79,9 +78,8 @@ public class KampusFragment extends Fragment {
         WebViewClient webViewClient = new WebViewClient();
         _webView.setWebViewClient(webViewClient);
 
-        WebChromeClient webChromeClient = new WebChromeClient();
-        _webView.setWebChromeClient(webChromeClient);
-
+        WebChromeClient webChormeClient = new WebChromeClient();
+        _webView.setWebChromeClient(webChormeClient);
         // Inflate the layout for this fragment
         return view;
     }
