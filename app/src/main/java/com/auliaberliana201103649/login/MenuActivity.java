@@ -7,14 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MenuActivity extends AppCompatActivity
-{
-    private Button _tampilMahasiswaButton, _tampilForexButton, _tampilCuacaButton, _tampilImplicitButton, _tampilTabLayoutButton;
-    private Intent _tampilMahasiswaIntent, _tampilForexIntent, _tampilCuacaIntent, _tampilImplicitIntent, _tampilTabLayoutIntent;
+public class MenuActivity extends AppCompatActivity {
+    private Button _tampilMahasiswaButton, _tampilForexButton, _tampilCuacaButton, _tampilImplicitButton, _tampilTabLayoutButton, _tampilHotelAppButton, _tampilWebViewLanjutanButton;
+    private Intent _tampilMahasiswaIntent, _tampilForexIntent, _tampilCuacaIntent, _tampilImplicitIntent, _tampilTabLayoutIntent, _tampilHotelAppIntent, _tampilWebViewLanjutanIntent;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
@@ -23,6 +21,8 @@ public class MenuActivity extends AppCompatActivity
         initTampilCuacaButton();
         initTampilImplicitButton();
         initTampilTabLayoutButton();
+        initTampilHotelAppButton();
+        initTampilWebViewLanjutanButton();
 
         Bundle bundle = getIntent().getExtras();
         String activityTitle = bundle.getString("username");
@@ -32,11 +32,9 @@ public class MenuActivity extends AppCompatActivity
 
     }
 
-    private void  initTampilMahasiswaButton()
-    {
+    private void initTampilMahasiswaButton() {
         _tampilMahasiswaButton = (Button) findViewById(R.id.tampilMahasiswaButton);
-        _tampilMahasiswaButton.setOnClickListener(new View.OnClickListener()
-        {
+        _tampilMahasiswaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 _tampilMahasiswaIntent = new Intent(getApplicationContext(), TampilMahasiswaActivity.class);
@@ -45,14 +43,11 @@ public class MenuActivity extends AppCompatActivity
         });
     }
 
-    private void initTampilForexButton()
-    {
+    private void initTampilForexButton() {
         _tampilForexButton = (Button) findViewById(R.id.tampilForexButton);
-        _tampilForexButton.setOnClickListener(new View.OnClickListener()
-        {
+        _tampilForexButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 _tampilForexIntent = new Intent(getApplicationContext(), ForexMainActivity.class);
                 startActivity(_tampilForexIntent);
             }
@@ -60,8 +55,7 @@ public class MenuActivity extends AppCompatActivity
     }
 
 
-    private void initTampilCuacaButton()
-    {
+    private void initTampilCuacaButton() {
         _tampilCuacaButton = findViewById(R.id.tampilCuacaButton);
 
         _tampilCuacaButton.setOnClickListener(new View.OnClickListener() {
@@ -73,8 +67,7 @@ public class MenuActivity extends AppCompatActivity
         });
     }
 
-    private void initTampilImplicitButton()
-    {
+    private void initTampilImplicitButton() {
         _tampilImplicitButton = findViewById(R.id.tampilImplicitButton);
 
         _tampilImplicitButton.setOnClickListener(new View.OnClickListener() {
@@ -87,8 +80,7 @@ public class MenuActivity extends AppCompatActivity
     }
 
 
-    private void initTampilTabLayoutButton()
-    {
+    private void initTampilTabLayoutButton() {
         _tampilTabLayoutButton = findViewById(R.id.tampilTabLayoutButton);
 
         _tampilTabLayoutButton.setOnClickListener(new View.OnClickListener() {
@@ -99,4 +91,29 @@ public class MenuActivity extends AppCompatActivity
             }
         });
     }
-}
+
+    private void initTampilHotelAppButton() {
+        _tampilHotelAppButton = findViewById(R.id.tampilHotelAppButton);
+
+        _tampilHotelAppButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                _tampilHotelAppIntent = new Intent(getApplicationContext(), HotelAppMainActivity.class);
+                startActivity(_tampilHotelAppIntent);
+            }
+        });
+    }
+
+        private void initTampilWebViewLanjutanButton()
+        {
+            _tampilWebViewLanjutanButton = findViewById(R.id.tampilWebViewLanjutan);
+
+            _tampilWebViewLanjutanButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    _tampilWebViewLanjutanIntent = new Intent(getApplicationContext(), WebViewLanjutanMainActivity.class);
+                    startActivity(_tampilWebViewLanjutanIntent);
+                }
+            });
+        }
+    }
